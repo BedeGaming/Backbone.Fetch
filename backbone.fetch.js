@@ -6,6 +6,8 @@
 //     For all details and documentation:
 //     https://github.com/akre54/Backbone.Fetch
 
+import fetch from 'unfetch';
+
 (function() {
   'use strict';
 
