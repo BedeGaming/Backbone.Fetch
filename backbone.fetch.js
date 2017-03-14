@@ -56,8 +56,12 @@ var ajax = function(options) {
       return promise.then(function(responseData) {
         error.response = response;
         error.responseData = responseData;
-        if (options.error) options.error(error);
-        throw error;
+        if (options.error) {
+          options.error(error);
+        } else {
+          throw error;
+        }
+
       });
     })
     .then(function(responseData) {
