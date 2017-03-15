@@ -28,7 +28,7 @@ var stringifyGETParams = function(url, data) {
 };
 
 var getData = function(response, dataType) {
-  return dataType === 'json' ? response.json() : response.text();
+  return dataType === 'json' && response.status !== 204 ? response.json() : response.text();
 };
 
 var ajax = function(options) {
