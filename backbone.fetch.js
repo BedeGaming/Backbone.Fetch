@@ -65,7 +65,7 @@ var ajax = function(options) {
       });
     })
     .then(function(responseData) {
-      if (options.success) options.success(responseData);
+      if (options.success && responseData) options.success(responseData);
       return responseData;
     });
 };
