@@ -1,5 +1,5 @@
 {
-  "name": "backbone.fetch",
+  "name": "@bedegaming/backbone.fetch",
   "version": "0.2.4",
   "author": "Adam Krebs <amk528@cs.nyu.edu>",
   "description": "A drop-in Backbone.ajax replacement powered by window.fetch",
