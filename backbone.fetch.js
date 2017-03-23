@@ -48,6 +48,12 @@ var ajax = function(options) {
 
   return fetch(options.url, options)
     .then(function(response) {
+      if (response.status === 204) {
+        return new Promise(function(resolve) {
+          resolve({});
+        });
+      }
+
       var promise = getData(response, options.dataType);
 
       if (response.ok) return promise;
